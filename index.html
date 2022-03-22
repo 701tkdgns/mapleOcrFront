@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link href="cover.css" th:href="@{/cover.css}" rel="stylesheet">
+    <link href="cover.css" th:href="@{/cover.css}" rel="stylesheet">  <!-- cover.css로 꾸미기 -->
     <title th:text="${title}">mapleOcr</title>
   </head>
   <body class="d-flex h-100 text-center text-white">
@@ -26,18 +26,18 @@
         <a href="/index.html" onclick="location.href='/'" style="color: white; text-decoration: none;"><h1>MapleStory DailyQuest</h1></a>
         
         <div class="image-upload" id="image-upload">
-        <form method="get" enctype="multipart/form-data">
-          <div class="button">
+        <form method="get" enctype="multipart/form-data">  <!-- 이미지 올리는 버튼 -->
+          <div class="button"> 
             <label for="chooseimg">
               👉 CLICK HERE! 👈
             </label>
           </div>
-          <input type="file" accept="image/*" name="chooseimg" id="chooseimg" onchange="test(this)">
-        </form>
+          <input type="file" accept="image/*" name="chooseimg" id="chooseimg" onchange="test(this)">  <!-- onchange : 요소에 변화가 생길 시 실행하는 html 내장 event-->
+        </form> <!-- 여기까지 이미지 올리는 부분-->
       </div>
         <div id="image-show">
         </div> <!-- 이미지 보이는 곳 -->
-        <script src="res.js"></script>
+        <script src="res.js"></script> 
       </main>
 
       <footer class="mt-auto text-white-50">
