@@ -60,31 +60,12 @@
 //     container.appendChild(newImage);
 // };
 
-
-var submit = document.getElementById('submitButton');
-submit.onclick = showImage;     //Submit 버튼 클릭시 이미지 보여주기
-
-function showImage() {
-    var newImage = document.getElementById('image-show').lastElementChild;
-  
-    //이미지는 화면에 나타나고
-    newImage.style.visibility = "visible";
-  
-    //이미지 업로드 버튼은 숨겨진다
-    document.getElementById('image-upload').style.visibility = 'hidden';
-
-    document.getElementById('fileName').textContent = null;     //기존 파일 이름 지우기
-}
-
-
-
 function test(input){
     var file = input.files[0];
 
     var newImage = document.createElement("img");
     newImage.setAttribute("class", 'img');
-
-    console.log(file);
+    
 
     newImage.src = URL.createObjectURL(file);
     newImage.style.width = "100%";
@@ -94,5 +75,14 @@ function test(input){
     var container = document.getElementById('image-show');
     container.appendChild(newImage);
     container.style.visibility = "visible";
+    file.textContent = null;
+
+    var newImage = document.getElementById('image-show').lastElementChild;
+
+    //이미지는 화면에 나타나고
+    newImage.style.visibility = "visible";
+  
+    //이미지 업로드 버튼은 숨겨진다
+    document.getElementById('image-upload').style.visibility = 'hidden';
 
 }
