@@ -1,0 +1,40 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" class="h-100">
+  <head th:fragment="head(title)">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="cover.css" th:href="@{/cover.css}" rel="stylesheet">
+    <title th:text="${title}">mapleOcr</title>
+  </head>
+  <body class="d-flex h-100 text-center text-white">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" th:fragment="default">
+      <header class="mb-auto">
+        <div>
+          <nav class="nav nav-masthead justify-content-center float-md-start">
+            <a href="#" onclick="location.href='/'" style="color: white; text-decoration: none;"><h3>MQ</h3></a>
+          </nav>
+        </div>
+      </header>
+    
+      <main class="px-3">
+        <h1>MapleStory DailyQuest &nbsp;</h1>
+        <form action="./result.html" method="get" enctype="multipart/form-data">
+          <input type="file" accept="image/*" id="chooseimg" onchange="test(this)">
+        </form>
+        <div id="image-show">
+        </div>
+        <script src="res.js"></script>
+      </main>
+
+      <footer class="mt-auto text-white-50">
+        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
